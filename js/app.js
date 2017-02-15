@@ -1,5 +1,7 @@
 "use strict";
 
+let el = document.querySelector('#map');
+
 let locations = [
   {lat: -31.563910, lng: 147.154312},
   {lat: -33.718234, lng: 150.363181},
@@ -27,23 +29,5 @@ let locations = [
 ];
 
 function initMap() {
-
-    let map = new google.maps.Map(document.querySelector('#map'), {
-      zoom: 12,
-      center: {lat: -37.765015, lng: 145.133858}
-    });
-
-    // Create an array of alphabetical characters used to label the markers.
-    let labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-    let markers = locations.map(function(location, i) {
-      return new google.maps.Marker({
-        position: location,
-        label: labels[i % labels.length]
-      });
-    });
-
-    let markerCluster = new MarkerClusterer(map, markers,
-        {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
-      );
+  RenderMap.createMap(el, locations);
 }
