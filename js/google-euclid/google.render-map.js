@@ -12,10 +12,11 @@ const RenderMap = (function () {
   }
 
   let m = {
-    createMap: function (el, arr, zoom) {
+    createMap: function (el, arr, zoom, mapTypeId) {
       let map = new google.maps.Map(el, {
         zoom,
-        center: arr[0]
+        center: arr[0],
+        mapTypeId
       });
 
       createMarkers(arr, map);

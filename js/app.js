@@ -29,6 +29,6 @@ let locations = [
 ];
 
 function initMap() {
-  RenderMap.createMap(el, locations, 12);
-  Convert.convertAddress({address: '18 W 7th St, Suite #3 Cincinnati, OH 45202'});
+  RenderMap.createMap(el, locations, 12, 'hybrid');
+  Convert.convertAddress({address: '669 G.T. Reynolds Rd. Waynesburg, KY 40489'});
 }
