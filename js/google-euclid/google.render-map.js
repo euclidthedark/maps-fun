@@ -12,9 +12,9 @@ const RenderMap = (function () {
   }
 
   let m = {
-    createMap: function (el, arr) {
+    createMap: function (el, arr, zoom) {
       let map = new google.maps.Map(el, {
-        zoom: 1,
+        zoom,
         center: arr[0]
       });
 
