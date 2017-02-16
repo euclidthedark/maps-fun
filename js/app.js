@@ -30,4 +30,5 @@ let locations = [
 
 function initMap() {
   RenderMap.createMap(el, locations);
+  Convert.convertAddress({address: '18 W 7th St, Suite #3 Cincinnati, OH 45202'});
 }
